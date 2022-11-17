@@ -1,3 +1,25 @@
+# Sistema de gestión de ordenes
+Sistema de gestión de ordenes y clientes.
+
+## Empresa dedicada
+R&M Motos y Repuestos
+
+## Integrantes 👥
+
+Pamela Giselle Chipagua Hernández [CH160423] 👩‍💻
+
+Jonathan Alejandro Coreas Carbajal [CC171885] 👨‍💻
+
+Francisca Abigail García López [GL180669] 👨‍💻
+
+Gabriela Saraí Pacheco Guerrero [PG180134] 👨‍💻
+
+## Licencia 📃
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencia de Creative Commons Reconocimiento 4.0 Internacional</a>.
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Giselle-Ch/Sistema-registros">Sistema-registros Gestor de ordenes </a> by <span property="cc:attributionName">Pamela Giselle Chipagua Hernández, Jonathan Alejandro Coreas Carbajal, Francisca Abigail García López and Gabriela Saraí Pacheco Guerrero</span> is marked with <a href="http://creativecommons.org/publicdomain/zero/1.0?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC0 1.0 Universal<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1"></a></p>
+
+# Framework utilizado
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
