@@ -51,9 +51,9 @@ class ClienteController extends Controller
 
         $validacion = $request->validate([
             'nombre_cliente' => 'required|string',
-            'dui_cliente' => 'required|regex:(^[0-9]{8}-[0-9]{1}$)|size:10',
+            'dui_cliente' => 'required|regex:(^[0-9]{8}-[0-9]{1}$)|size:10|unique:clientes,dui_cliente',
             'celular' => 'required|regex:(([0-9][ -]*){8})|size:9',
-            'correo' => 'regex:(^[^@]+@[^@]+\.[a-zA-Z]{2,}$)'
+            'correo' => 'nullable|regex:(^[^@]+@[^@]+\.[a-zA-Z]{2,}$)'
         ]);
 
         $cliente = Cliente::create($request->all());
@@ -97,7 +97,16 @@ class ClienteController extends Controller
      */
     public function update(Request $request, Cliente $cliente)
     {
-        request()->validate(Cliente::$rules);
+        // request()->validate(Cliente::$rules);
+
+        //---- Validaciones ----
+
+        $validacion = $request->validate([
+            'nombre_cliente' => 'required|string',
+            'dui_cliente' => 'required|regex:(^[0-9]{8}-[0-9]{1}$)|size:10|unique:clientes,dui_cliente',
+            'celular' => 'required|regex:(([0-9][ -]*){8})|size:9',
+            'correo' => 'nullable|regex:(^[^@]+@[^@]+\.[a-zA-Z]{2,}$)'
+        ]);
 
         $cliente->update($request->all());
 

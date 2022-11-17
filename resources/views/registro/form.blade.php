@@ -23,7 +23,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('precio_servicio_r') }}
-            {{ Form::text('precio_servicio_r', $registro->precio_servicio_r, ['class' => 'form-control' . ($errors->has('precio_servicio_r') ? ' is-invalid' : ''), 'placeholder' => '0.00' ]) }}
+            {{ Form::number('precio_servicio_r', $registro->precio_servicio_r, ['class' => 'form-control' . ($errors->has('precio_servicio_r') ? ' is-invalid' : ''), 'placeholder' => '0.00' , 'step' => '0.01']) }}
             {!! $errors->first('precio_servicio_r', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -33,17 +33,17 @@
         </div>
         <div class="form-group">
             {{ Form::label('precio_repuesto_r') }}
-            {{ Form::text('precio_repuesto_r', $registro->precio_repuesto_r, ['class' => 'form-control' . ($errors->has('precio_repuesto_r') ? ' is-invalid' : ''), 'placeholder' => '0.00']) }}
+            {{ Form::number('precio_repuesto_r', $registro->precio_repuesto_r, ['class' => 'form-control' . ($errors->has('precio_repuesto_r') ? ' is-invalid' : ''), 'placeholder' => '0.00' , 'step' => '0.01']) }}
             {!! $errors->first('precio_repuesto_r', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('unidades') }}
-            {{ Form::text('unidades', $registro->unidades, ['class' => 'form-control' . ($errors->has('unidades') ? ' is-invalid' : ''), 'placeholder' => 'Unidades']) }}
+            {{ Form::number('unidades', $registro->unidades, ['class' => 'form-control' . ($errors->has('unidades') ? ' is-invalid' : ''), 'placeholder' => 'Unidades']) }}
             {!! $errors->first('unidades', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('total') }}
-            {{ Form::text('total', $registro->total, ['class' => 'form-control' . ($errors->has('total') ? ' is-invalid' : ''), 'placeholder' => '0.00', 'disabled']) }}
+            {{ Form::text('total', $registro->total, ['class' => 'form-control' . ($errors->has('total') ? ' is-invalid' : ''), 'placeholder' => '0.00', 'value' => '0.00', 'disabled']) }}
             {!! $errors->first('total', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

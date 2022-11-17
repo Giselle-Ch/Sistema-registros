@@ -36,8 +36,8 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Nombre Cliente</th>
-										<th>Dui Cliente</th>
+										<th>Nombre del cliente</th>
+										<th>DUI</th>
 										<th>Celular</th>
 										<th>Correo</th>
 

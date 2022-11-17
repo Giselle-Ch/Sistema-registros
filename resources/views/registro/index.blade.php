@@ -36,13 +36,13 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Fecha Llegada</th>
-										<th>Fecha Entrega</th>
-										<th>Placa de Moto</th>
+										<th>Fecha de llegada</th>
+										<th>Fecha de entrega</th>
+										<th>Placa de la moto</th>
 										<th>Servicio</th>
-										<th>Precio Servicio</th>
+										<th>Precio del servicio</th>
 										<th>Repuesto</th>
-										<th>Precio Repuesto</th>
+										<th>Precio U. del repuesto</th>
 										<th>Unidades</th>
 										<th>Total</th>
 

@@ -36,9 +36,9 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Nombre Servicio</th>
+										<th>Nombre del servicio</th>
 										<th>Detalle</th>
-										<th>Precio Servicio</th>
+										<th>Precio del servicio</th>
 
                                         <th></th>
                                     </tr>

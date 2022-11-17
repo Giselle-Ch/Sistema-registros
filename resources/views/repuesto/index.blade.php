@@ -36,9 +36,9 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Nombre Repuesto</th>
+										<th>Nombre del repuesto</th>
 										<th>Marca</th>
-										<th>Precio Repuesto</th>
+										<th>Precio del repuesto</th>
 
                                         <th></th>
                                     </tr>

@@ -60,10 +60,10 @@ class RegistroController extends Controller
             'fecha_entrega' => 'required|date|after:fecha_llegada',
             'id_moto' => 'required',
             'id_servicio' => 'required',
-            'precio_servicio_r' => 'required',
+            'precio_servicio_r' => 'required|numeric|min:0',
             'id_repuesto' => 'required',
-            'unidades' => 'required',
-            'precio_repuesto_r' => 'required',
+            'unidades' => 'required|numeric|min:0',
+            'precio_repuesto_r' => 'required|numeric|min:0'
         ]);
 
         $registroTot = new Registro();
@@ -122,9 +122,32 @@ class RegistroController extends Controller
      */
     public function update(Request $request, Registro $registro)
     {
-        request()->validate(Registro::$rules);
+        // request()->validate(Registro::$rules);
+        //---- Validaciones ----
 
-        $registro->update($request->all());
+        $validacion = $request->validate([
+            'fecha_llegada' => 'required|date',
+            'fecha_entrega' => 'required|date|after:fecha_llegada',
+            'id_moto' => 'required',
+            'id_servicio' => 'required',
+            'precio_servicio_r' => 'required|numeric|min:0',
+            'id_repuesto' => 'required',
+            'unidades' => 'required|numeric|min:0',
+            'precio_repuesto_r' => 'required|numeric|min:0'
+        ]);
+
+        // $registro->update($request->all());
+        $registro->fecha_llegada = $request->fecha_llegada;
+        $registro->fecha_entrega = $request->fecha_entrega;
+        $registro->id_moto = $request->id_moto;
+        $registro->id_servicio = $request->id_servicio;
+        $registro->precio_servicio_r = $request->precio_servicio_r;
+        $registro->id_repuesto = $request->id_repuesto;
+        $registro->unidades = $request->unidades;
+        $registro->precio_repuesto_r = $request->precio_repuesto_r;
+        $registro->total = ($request->precio_servicio_r + ($request->unidades * $request->precio_repuesto_r));
+
+        $registro->update();
 
         return redirect()->route('registros.index')
             ->with('success', 'El registro se ha actualizado exitosamente.');

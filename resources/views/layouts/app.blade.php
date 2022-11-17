@@ -22,7 +22,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-black shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    Motos y Repuestos
+                    R&M Motos y Repuestos
                 </a>
                 {{-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Motos y Repuestos') }}

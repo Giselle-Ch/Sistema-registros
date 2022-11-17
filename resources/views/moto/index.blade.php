@@ -36,10 +36,11 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Id Placa</th>
+										<th>Placa</th>
 										<th>Marca</th>
 										<th>Color</th>
-										<th>DUI Cliente</th>
+                                        <th>Cliente</th>
+										<th>DUI del cliente</th>
 
                                         <th></th>
                                     </tr>
@@ -52,6 +53,7 @@
 											<td>{{ $moto->id_placa }}</td>
 											<td>{{ $moto->marca }}</td>
 											<td>{{ $moto->color }}</td>
+                                            <td>{{ $moto->cliente->nombre_cliente }}</td>
 											<td>{{ $moto->cliente->dui_cliente }}</td>
 
                                             <td>

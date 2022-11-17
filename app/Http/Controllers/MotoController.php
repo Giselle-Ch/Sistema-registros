@@ -98,7 +98,15 @@ class MotoController extends Controller
      */
     public function update(Request $request, Moto $moto)
     {
-        request()->validate(Moto::$rules);
+        // request()->validate(Moto::$rules);
+
+        //---- Validaciones ----
+
+        $validacion = $request->validate([
+            'id_placa' => 'required|size:7',
+            'marca' => 'required',
+            'id_cliente' => 'required'
+        ]);
 
         $moto->update($request->all());
 

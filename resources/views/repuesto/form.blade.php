@@ -13,7 +13,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('precio_repuesto') }}
-            {{ Form::text('precio_repuesto', $repuesto->precio_repuesto, ['class' => 'form-control' . ($errors->has('precio_repuesto') ? ' is-invalid' : ''), 'placeholder' => '0.00']) }}
+            {{ Form::number('precio_repuesto', $repuesto->precio_repuesto, ['class' => 'form-control' . ($errors->has('precio_repuesto') ? ' is-invalid' : ''), 'placeholder' => '0.00', 'step' => '0.01']) }}
             {!! $errors->first('precio_repuesto', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

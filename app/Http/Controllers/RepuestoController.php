@@ -52,7 +52,7 @@ class RepuestoController extends Controller
         $validacion = $request->validate([
             'nombre_repuesto' => 'required',
             'marca' => 'required',
-            'precio_repuesto' => 'required|numeric'
+            'precio_repuesto' => 'required|numeric|min:0'
         ]);
 
         $repuesto = Repuesto::create($request->all());
@@ -96,7 +96,15 @@ class RepuestoController extends Controller
      */
     public function update(Request $request, Repuesto $repuesto)
     {
-        request()->validate(Repuesto::$rules);
+        // request()->validate(Repuesto::$rules);
+
+        //---- Validaciones ----
+
+        $validacion = $request->validate([
+            'nombre_repuesto' => 'required',
+            'marca' => 'required',
+            'precio_repuesto' => 'required|numeric|min:0'
+        ]);
 
         $repuesto->update($request->all());
 

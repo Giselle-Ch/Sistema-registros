@@ -43,7 +43,14 @@ class ServicioController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Servicio::$rules);
+        // request()->validate(Servicio::$rules);
+
+        //---- Validaciones ----
+
+        $validacion = $request->validate([
+            'nombre_servicio' => 'required',
+            'precio_servicio' => 'required|numeric|min:0'
+        ]);
 
         $servicio = Servicio::create($request->all());
 
@@ -94,7 +101,7 @@ class ServicioController extends Controller
 
         $validacion = $request->validate([
             'nombre_servicio' => 'required',
-            'precio_servicio' => 'required|numeric'
+            'precio_servicio' => 'required|numeric|min:0'
         ]);
 
         $servicio->update($request->all());
