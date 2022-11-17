@@ -103,12 +103,17 @@ class ClienteController extends Controller
 
         $validacion = $request->validate([
             'nombre_cliente' => 'required|string',
-            'dui_cliente' => 'required|regex:(^[0-9]{8}-[0-9]{1}$)|size:10|unique:clientes,dui_cliente',
+            'dui_cliente' => 'required|regex:(^[0-9]{8}-[0-9]{1}$)|size:10|',
             'celular' => 'required|regex:(([0-9][ -]*){8})|size:9',
             'correo' => 'nullable|regex:(^[^@]+@[^@]+\.[a-zA-Z]{2,}$)'
         ]);
 
-        $cliente->update($request->all());
+        $cliente->nombre_cliente = $request->nombre_cliente;
+        $cliente->celular = $request->celular;
+        $cliente->correo = $request->correo;
+
+        $cliente->update();
+        // $cliente->update($request->all());
 
         return redirect()->route('clientes.index')
             ->with('success', 'El registro se ha actualizado exitosamente.');
